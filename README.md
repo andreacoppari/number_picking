@@ -48,7 +48,9 @@ Since we were only 18 students, the professor would map the result using modulo 
 student_index = digit_sum % 18
 ```
 
-This wrapping creates bias. The mod operation skews the distribution in favor of students near the center of the list, **but only when using large enough numbers**.
+This wrapping creates bias. **When there's no overflow** (i.e., digit sums aren't wrapped with a modulo), students in the middle of the list are more likely to be selected — the distribution is peaked around mid-range values.
+
+Applying a modulo (e.g., % 18) helps flatten the distribution by spreading the bias more evenly across the list — **but this only works well when the range of numbers is large enough to populate the entire digit sum space uniformly**.
 
 ### Comparison Example
 
