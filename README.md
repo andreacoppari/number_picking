@@ -6,6 +6,7 @@ Can picking a random number — *the De Paolis way* — converge to a fixed dist
 ## 📚 Table of Contents
 
 - [The De Paolis Way](#the-de-paolis-way)
+- [Usage](#usage)
 - [Is the Method Fair?](#is-the-method-fair)
 - [Symmetry!](#symmetry)
 
@@ -18,6 +19,20 @@ Prof. De Paolis is a high school physics teacher who used to pick a "random" num
 2. Taking the page number  
 3. Summing the digits of that number  
 4. Using the resulting sum to select a student (ordered alphabetically) for an oral test
+
+## Usage
+
+Install packages:
+
+```
+pip install -r requirements.txt
+```
+
+and run `main.py`:
+
+```
+python main.py
+```
 
 ## Is the Method Fair?
 
@@ -46,7 +61,7 @@ The smaller the page range, the more uneven the distribution becomes.
 
 ## Symmetry!
 
-Interestingly, for certain upper bounds, the digit sum distribution becomes **perfectly symmetric** — but only **until a new maximum digit sum appears**.
+Interestingly, for certain upper bounds, the digit sum distribution becomes **perfectly symmetric** — but only **until a new maximum digit sum appears**. You can print a list of the first N elements by running `symmetric_numbers.py`
 
 The numbers at which this symmetry holds form a special sequence, defined recursively as:
 
