@@ -2,7 +2,6 @@
 
 Can picking a random number — *the De Paolis way* — converge to a fixed distribution?
 
----
 
 ## 📚 Table of Contents
 
@@ -10,7 +9,6 @@ Can picking a random number — *the De Paolis way* — converge to a fixed dist
 - [Is the Method Fair?](#is-the-method-fair)
 - [Symmetry!](#symmetry)
 
----
 
 ## The De Paolis Way
 
@@ -20,8 +18,6 @@ Prof. De Paolis is a high school physics teacher who used to pick a "random" num
 2. Taking the page number  
 3. Summing the digits of that number  
 4. Using the resulting sum to select a student (ordered alphabetically) for an oral test
-
----
 
 ## Is the Method Fair?
 
@@ -47,21 +43,38 @@ This wrapping creates bias. The mod operation skews the distribution in favor of
 
 The smaller the page range, the more uneven the distribution becomes.
 
----
 
 ## Symmetry!
 
-Interestingly, for certain upper bounds, the digit sum distribution is **perfectly symmetric**, but only **before** a new maximum digit sum is introduced.
+Interestingly, for certain upper bounds, the digit sum distribution becomes **perfectly symmetric** — but only **until a new maximum digit sum appears**.
 
-The sequence of numbers that produce symmetric distributions can be described by:
+The numbers at which this symmetry holds form a special sequence, defined recursively as:
 
 ![Symmetry sequence formula](/img/image.png)
 
 Where:
 
-* `Sₙ` is the n-th number in the sequence that keeps symmetry
-* `floor(log₁₀(Sₙ₋₁ + 2))` is the number of digits of `Sₙ₋₁ + 2`
+- `S_n` is the *n*-th number in the sequence that maintains symmetry
+- The number of digits of `S_{n-1} + 2` is given by:
+$$⌊log₁₀(Sₙ₋₁ + 2)⌋ + 1$$
 
-These numbers (e.g., 18, 28, ..., 998, 1998) act as **symmetry breakpoints**. As soon as the next digit sum appears (e.g. 63 for `9999999`), the distribution becomes slightly unbalanced.
+- At each step, we increment the current value by:
+
+  $$10^{\text{digits} - 1} = 10^{\left\lfloor \log_{10}(S_{n-1} + 2) \right\rfloor}$$
+
+This leads to the known sequence:
+
+```
+
+18, 28, 38, ..., 98, 198, 298, ..., 998, 1998, ...
+
+```
+
+Each of these values represents a **symmetry breakpoint** — a point up to which the digit sum distribution remains balanced and bell-shaped.
+
+Once the next possible digit sum is introduced (e.g., 63 when reaching `9999999`), the symmetry breaks, and the distribution begins to shift.
+
+These breakpoints occur just before new digit sums become possible — making them a natural boundary in the growth of the digit sum space.
 
 ---
+#### Hope you enjoyed, Andrea Coppari :)
