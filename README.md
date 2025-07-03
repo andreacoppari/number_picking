@@ -71,8 +71,8 @@ The numbers at which this symmetry holds form a special sequence, defined recurs
 
 Where:
 
-- `S_n` is the *n*-th number in the sequence that maintains symmetry
-- The number of digits of `S_{n-1} + 2` is given by:
+- $S_n$ is the *n*-th number in the sequence that maintains symmetry
+- The number of digits of $S_{n-1} + 2$ is given by:
 
     $$\left\lfloor \log_{10}(S_{n-1} + 2) \right\rfloor + 1$$
 
