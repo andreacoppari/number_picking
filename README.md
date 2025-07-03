@@ -73,7 +73,7 @@ Where:
 
 - `S_n` is the *n*-th number in the sequence that maintains symmetry
 - The number of digits of `S_{n-1} + 2` is given by:
-$$⌊log₁₀(Sₙ₋₁ + 2)⌋ + 1$$
+    $$\left\lfloor \log_{10}(S_{n-1} + 2) \right\rfloor + 1$$
 
 - At each step, we increment the current value by:
 
