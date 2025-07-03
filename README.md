@@ -27,7 +27,7 @@ Prof. De Paolis is a high school physics teacher who used to pick a "random" num
 
 **Realistically: no.**
 
-As shown in the image below, assuming a book has an absurd number of pages (9,999,998), the maximum possible digit sum is 63. The resulting distribution of digit sums forms a bell-shaped curve — **symmetric** in this specific case. (More on that in the next section.)
+As shown in the image below, assuming a book has an absurd number of pages (9,999,998), the maximum possible digit sum is 62. The resulting distribution of digit sums forms a bell-shaped curve — **symmetric** in this specific case. (More on that in the next section.)
 
 ![Distribution with 9,999,998 pages](/img/Figure_1.png)
 
@@ -62,6 +62,6 @@ Where:
 * `Sₙ` is the n-th number in the sequence that keeps symmetry
 * `floor(log₁₀(Sₙ₋₁ + 2))` is the number of digits of `Sₙ₋₁ + 2`
 
-These numbers (e.g., 18, 28, ..., 998, 1998) act as **symmetry breakpoints**. As soon as the next digit sum appears (e.g. 64 for `9999999`), the distribution becomes slightly unbalanced.
+These numbers (e.g., 18, 28, ..., 998, 1998) act as **symmetry breakpoints**. As soon as the next digit sum appears (e.g. 63 for `9999999`), the distribution becomes slightly unbalanced.
 
 ---
