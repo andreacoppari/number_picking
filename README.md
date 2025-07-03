@@ -51,7 +51,7 @@ The smaller the page range, the more uneven the distribution becomes.
 
 ## Symmetry!
 
-Interestingly, for certain upper bounds, the digit sum distribution is nearly **perfectly symmetric**, but only **before** a new maximum digit sum is introduced.
+Interestingly, for certain upper bounds, the digit sum distribution is **perfectly symmetric**, but only **before** a new maximum digit sum is introduced.
 
 The sequence of numbers that produce symmetric distributions can be described by:
 
