@@ -7,7 +7,7 @@ from collections import defaultdict
 MAX_N = 9999998
 
 # Maximum sum of the digits (it will overflow, set to MAX_N for no limit)
-MAX_SUM = 18
+MAX_SUM = 10000
 
 # If True, draw only final plot; if False, update in real-time
 DRAW_AT_END_ONLY = True
@@ -67,7 +67,7 @@ def update_plot(data):
 def main():
     for n in range(1, MAX_N + 1):
         digit_sum = sum_of_digits(n)
-        digit_sum_counts[digit_sum % MAX_SUM + 1] += 1
+        digit_sum_counts[digit_sum % MAX_SUM] += 1
         if not DRAW_AT_END_ONLY:
             update_plot(digit_sum_counts)
 
